@@ -1,56 +1,56 @@
 <template>
     <div class="project center">
-      <div class="categories">
-          <button class="categories__btn">Bathroom</button>
-          <button class="categories__btn">Bed Room</button>
-          <button class="categories__btn">Kitchen</button>
-          <button class="categories__btn">Living Area</button>
-      </div>
-      <div class="content">
-          <div class="content__left">
-              <div class="item-long">
-                  <img src="../assets/proj-item-1.jpg" alt="image">
-                  <div class="text-block">
-                      <div class="frame">
-                          <h4>Minimal Bedroom</h4>
-                          <p>Decor / Artchitecture</p>
-                      </div>
-                      <button class="arrow">></button>
-                  </div>
-              </div>
-  
-              <div class="item-short">
-                  <img src="../assets/proj-item-2.jpg" alt="image">
-                  <div class="text-block">
-                      <div class="frame">
-                          <h4>Classic Minimal Bedroom</h4>
-                          <p>Decor / Artchitecture</p>
-                      </div>
-                      <button class="arrow">></button>
-                  </div>
-              </div>
-  
-              <div class="item-long">
-                  <img src="../assets/proj-item-3.jpg" alt="image">
-                  <div class="text-block">
-                      <div class="frame">
-                          <h4>Minimal Bedroom table</h4>
-                          <p>Decor / Artchitecture</p>
-                      </div>
-                      <button class="arrow">></button>
-                  </div>
-              </div>
-  
-              <div class="item-short">
-                  <img src="../assets/proj-item-4.jpg" alt="image">
-                  <div class="text-block">
-                      <div class="frame">
-                          <h4>Modern Bedroom</h4>
-                          <p>Decor / Artchitecture</p>
-                      </div>
-                      <button class="arrow">></button>
-                  </div>
-              </div>
+        <div class="categories">
+            <button class="categories__btn">Bathroom</button>
+            <button class="categories__btn">Bed Room</button>
+            <button class="categories__btn">Kitchen</button>
+            <button class="categories__btn">Living Area</button>
+        </div>
+        <div class="content">
+            <div class="content__left">
+                <div class="item-long">
+                    <img src="../assets/proj-item-1.jpg" alt="image">
+                    <div class="text-block">
+                        <div class="frame">
+                            <h4>Minimal Bedroom</h4>
+                            <p>Decor / Artchitecture</p>
+                        </div>
+                        <button class="arrow">></button>
+                    </div>
+                </div>
+    
+                <div class="item-short">
+                    <img src="../assets/proj-item-2.jpg" alt="image">
+                    <div class="text-block">
+                        <div class="frame">
+                            <h4>Classic Minimal Bedroom</h4>
+                            <p>Decor / Artchitecture</p>
+                        </div>
+                        <button class="arrow">></button>
+                    </div>
+                </div>
+    
+                <div class="item-long">
+                    <img src="../assets/proj-item-3.jpg" alt="image">
+                    <div class="text-block">
+                        <div class="frame">
+                            <h4>Minimal Bedroom table</h4>
+                            <p>Decor / Artchitecture</p>
+                        </div>
+                        <button class="arrow">></button>
+                    </div>
+                </div>
+    
+                <div class="item-short">
+                    <img src="../assets/proj-item-4.jpg" alt="image">
+                    <div class="text-block">
+                        <div class="frame">
+                            <h4>Modern Bedroom</h4>
+                            <p>Decor / Artchitecture</p>
+                        </div>
+                        <button class="arrow">></button>
+                    </div>
+                </div>
           </div>
   
           <div class="content__right">
@@ -99,13 +99,13 @@
               </div>
   
           </div>
-      </div>
-      <div class="pagination">
-        <button class="pagination__btn">01</button>
-        <button class="pagination__btn">02</button>
-        <button class="pagination__btn">03</button>
-        <button class="pagination__btn">></button>
-      </div>
+        </div>
+        <div class="pagination">
+            <button class="pagination__btn">01</button>
+            <button class="pagination__btn">02</button>
+            <button class="pagination__btn">03</button>
+            <button class="pagination__btn">></button>
+        </div>
     </div>
   </template>
   
