@@ -1,26 +1,29 @@
 <template>
   <div id="app">
-    <HeaderComp />
-    <ProjectComp />
+    <!-- <HeaderComp /> -->
     <HomeComp />
-    <FooterComp />
+    <ProjectComp />
+    <!-- <FooterComp /> -->
+    <projectDetailsComp />
     
   </div>
 </template>
 
 <script>
-import HeaderComp from './components/HeaderComp.vue'
-import FooterComp from './components/FooterComp.vue'
+// import HeaderComp from './components/HeaderComp.vue'
+// import FooterComp from './components/FooterComp.vue'
 import ProjectComp from './components/ProjectComp.vue'
 import HomeComp from './components/HomeComp.vue'
+import projectDetailsComp from './components/projectDetailsComp.vue'
 
 export default {
   name: 'App',
   components: {
-    HeaderComp,
-    FooterComp,
+    // HeaderComp,
+    // FooterComp,
     ProjectComp,
     HomeComp,
+    projectDetailsComp,
   }
 }
 </script>

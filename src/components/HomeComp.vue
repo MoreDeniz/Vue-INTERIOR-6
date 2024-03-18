@@ -1,10 +1,11 @@
 <template>
     <div class="home center">
+        <HeaderComp />
         <HomeBanner />
         <HomeProject />
         <HomeCounter />
         <HomeBlog  />
-
+        <FooterComp />
     </div>
 </template>
 
@@ -13,6 +14,8 @@
     import HomeProject from './HomeProject.vue'
     import HomeCounter from './HomeCounter.vue'
     import HomeBlog from './HomeBlog.vue'
+    import HeaderComp from './HeaderComp.vue'
+    import FooterComp from './FooterComp.vue'
 
 
 
@@ -23,6 +26,8 @@
             HomeProject,
             HomeCounter,
             HomeBlog, 
+            HeaderComp,
+            FooterComp
         }
     }
 </script>
@@ -41,5 +46,7 @@
         flex-direction: column;
         align-items: center;
         gap: 96px;
+        
+        margin-bottom: 200px;
     }
 </style>

@@ -28,7 +28,7 @@
         padding-right: calc(50% - 960px);
     }
     .banner {
-        width: 1920px;
+        max-width: 1920px;
         height: 350px;
         display: flex;
         justify-content: center;
