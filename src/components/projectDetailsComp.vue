@@ -1,13 +1,7 @@
 <template>
     <div class="bigProject">
     <HeaderComp />
-    <div class="bookmark">
-        <img
-        src="../assets/project/projectDetails-banner.jpg"
-        class="bookmark__img"
-        />
-    </div>
-    <ProjectDetails  :project="project" />
+    <ProjectDetails  />
     <FooterComp />
     </div>
 </template>
@@ -24,21 +18,9 @@ export default{
         HeaderComp,
         ProjectDetails
     },
-    data(){
-        return{
-            project: {
-                id:1,
-                name:"Minimal Look Bedrooms",
-                description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamsem vitae turpis dignissim maximus. Aliquam sollicitudin tellumassa, vbel maximus purus posuere in. Dojrices gravida dignissim. Praesent at nibh in mi fringilla mattis. Phasellus ut dolor odio. Aenean in the ipsum vel lectus bibendum commodo. <br><br> In nec sem suscipit, convallis leo vitae, lacinia nibh. Cras amet tellus lectus. Vivamus ipsum nunc, mattis quis nibh id, pellentesque arcu. Donec a pellentesque Cras erat enim, gravida non ante vitae,elequis convallis elit, in viverra felis. Donec ultrices tellus vitae iaculisvd porta. Proin tincidunt ligula id purus porttitor.",
-                img:[
-                    "@/assets/projectDetails-slide-1.jpg",
-                    "@/assets/projectDetails-slide-1.jpg",
-                    "@/assets/projectDetails-slide-1.jpg",
-                    "@/assets/projectDetails-slide-1.jpg",         
-                ]
-            }
-        }
-    },
-
 }
 </script>
+
+<style scoped>
+
+</style>

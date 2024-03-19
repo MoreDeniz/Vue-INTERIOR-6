@@ -1,131 +1,62 @@
 <template>
     <div class="details">
-        <div class="details__name">
-    {{ project.name }}
-        </div>
-        <div class="details__description" v-html="project.description">
-    
-        </div>
-        <div class="carousel">
-            <button @click="prevIMG" class="carousel__prevButton">&lt;</button>
-            <button @click="nextIMG" class="carousel__nextButton">&gt;</button>
-            <div class="carousel__images">
-                <img :src="image"/>
+        <ProjectDetailsBanner />
+        <div class="center">
+            <div class="content">
+                <h2>{{ getTitle }}</h2>
+                <p>{{ getText1 }}</p>
+                <p>{{ getText2 }}</p>
             </div>
-            
-            <ul class="carousel__navlinks">
-                <input type="radio"  v-for="points,index in project.img" v-model="selectedImg" :value="index"  name="images" :key="index" />
-            </ul>
         </div>
+        
     </div>
-    </template>
+</template>
 
 
     <script>
+    import ProjectDetailsBanner from './ProjectDetailsBanner.vue'
+    // Подключение геттеров из хранилища
+    import { mapGetters } from 'vuex';
+
     export default{
         name:"ProjectDetails",
-        props:{
-            project:Object,
-        },
-        data(){
-            return{
-                selectedImg: 0
-            }
-        },
-        methods:{
-            prevIMG(){
-                console.log(this.project.img.length)
-                if(this.selectedImg == 0){
-                    this.selectedImg = this.project.img.length
-                }
-                this.selectedImg--
-            },
-            nextIMG(){
-                if(this.selectedImg >= this.project.img.length-1){
-                    this.selectedImg = 0
-                    return
-                }
-                this.selectedImg++
-            }
+        components: {
+            ProjectDetailsBanner,
         },
         computed:{
-            image(){
-                return this.project.img.filter((elem, index) => index == this.selectedImg)
-            },
-            
-        }
+            // Подключение действия из хранилища 
+            ...mapGetters(['getTitle', 'getText1', 'getText2'])
+        },
     }
-    </script>
+</script>
 
-    <style scoped>
-    .details{
-        margin-top: 200px;
-        max-width: var(--max-width);
-        margin-inline: auto;
+<style scoped>
+    .center {
+        padding-left: calc(50% - 600px);
+        padding-right: calc(50% - 600px);
         display: flex;
-        align-items: center;
-        flex-direction: column;}
-
-    .details__name{
-        width: 660px;
-        font-family: "DM Serif Display";
-        font-size: 50px;
-        line-height: 125%;
-        letter-spacing: 0.02em;
-        color: #292f36; 
-    }
-    .details__description{
-        margin-top: 11px;
-        font-family: 'Jost';
-        font-size: 22px;
-        width: 660px;
-        line-height: 150%;
-        letter-spacing: 0.01em;
-        color: #4d5053;
-    }
-    .carousel{
-        display: flex;
-        margin-top: 100px;
-        position: relative;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .carousel__nextButton, 
-    .carousel__prevButton{
-        position: absolute;
-        height: 30%;
-        top: 35%;
-        border: none;
-        width: 50px;
-        background-color: #C4C4C4;
-        font-size: 25px;
-        color: white;
-        mix-blend-mode: overlay;
-        cursor: pointer;
-    }
-    .carousel__prevButton{
-        left:0;    
-    }
-    .carousel__nextButton{
-        right:0;
-    }
-    .carousel__images {
-        display: flex;
-        flex-direction: row;
-        width:fit-content;
         justify-content: center;
-        align-items: flex-start;
+        margin-bottom: 200px;
     }
-    .carousel__images img{
-        object-fit: cover;
+    .content {
+        width: 658px;
     }
-    .carousel__navlinks{
-        margin-top: 25px;
-        display: flex;
-        gap: 25px;
+    .content h2 {
+        font-family: DM Serif Display;
+        font-size: 50px;
+        font-weight: 400;
+        line-height: 62.5px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        color: #292F36;
     }
-    .carousel__navlinks input{
-        cursor: pointer;
+    .content p {
+        font-family: Jost;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 33px;
+        letter-spacing: 0.01em;
+        text-align: left;
+        color: #4D5053;
     }
 </style>
